@@ -3,12 +3,15 @@ var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&fi
 var prefix = "https://cors-anywhere.herokuapp.com/";
 
 
+
 function getQuote() {
+
     $.getJSON(prefix + quoteUrl, createTweet);
     $.ajaxSetup({ cache: false });
 }
 
 function createTweet(input) {
+    
     var data = input[0];
     
     var quoteText = $(data.content).text().trim();
@@ -33,6 +36,8 @@ function createTweet(input) {
 $(document).ready(function() {
     getQuote();
     $('.trigger').click(function() {
+    	$('.quote').text("Loading...");
+    	$('.author').text("");
         getQuote();
     })
 });
