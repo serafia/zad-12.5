@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+	background-color: #55ACEE;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+main {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.box {
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 0;
+}
+.box > h2 {
+	font-style: italic;
+}
+.buttons {
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+}
+.buttons > .trigger {
+	background-color: #55ACEE;
+	color: #fff;
+	width: 300px;
+	height: 30px;
+	border: 1px solid #98c8ea;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 5px;
+	font-size: 16px;
+	transition: .3s;
+}
+.buttons > .tweet {
+	color: #fff;
+	text-decoration: none;
+	width: 300px;
+	height: 30px;
+	border: 1px solid #98c8ea;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .3s;
+}
+.trigger:hover,
+.tweet:hover {
+	background-color: #2D97BA;
+}
